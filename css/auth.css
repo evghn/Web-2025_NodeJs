@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.block-auth {
+    border: 1px solid rgba(138, 26, 26, .5); /* rgb 0-255  0 - FF*/
+    min-width: 250px;
+    max-width: 250px;
+    padding: 50px 20px;
+    margin: 10% auto;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    margin: 20px 0;
+    display: block;
+    padding: 0;
+}
+
+input {
+    margin-top: 7px;
+    width: 100%;
+    padding: 7px 5px;
+}
+
+button[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    background-color: blue;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.title {
+    font-size: 20pt;
+}
