@@ -1,0 +1,19 @@
+img {
+    width: 150px;
+    height: 100px;
+}
+
+.block-menu, .block-menu li {
+    display: inline;
+}
+
+.block-menu li {
+    padding: 10px;
+    background-color: aquamarine;    
+}
+
+.block-menu li a {
+    text-decoration: none;
+} 
+
+
