@@ -1,0 +1,91 @@
+.test-green {
+    background-color: rgb(15, 119, 46);
+}
+
+.test-red {
+    background-color: #375151;
+}
+
+.border {
+    border: 1px solid navy;
+
+}
+
+
+.red {
+   background-color: red; 
+}
+
+.green {
+   background-color: green; 
+}
+.blue {
+   background-color: blue; 
+}
+
+
+
+div {
+    width: 200px;
+    height: 150px;
+}
+
+.green, .blue, .red {
+    display: inline-block;
+    margin: 30px 20px;
+}
+
+span::after {
+    content: "!";
+}
+span::before {
+    content: "!";
+}
+
+.main {
+    width: 100%;
+    margin: 10px;
+    border: 1px solid navy;
+    height: 200px;
+}
+
+.static {
+    position: static;
+    top: 20px;
+}
+
+.relative {
+    position: relative;
+    top: -60px;
+    left: 300px;
+}
+
+.absolute {
+    position: absolute;
+    top: 60px;
+    left: 300px;
+}
+
+.main-relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+    top: calc(100vh - 100px);
+    left: calc(100vw - 100px);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.main-sticky {
+    height: 600px;
+}
+
+.sticky {
+    top: 20px;
+    position: sticky;
+
+}
