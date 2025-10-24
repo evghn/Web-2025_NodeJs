@@ -7,20 +7,28 @@ table, td, th {
     border-collapse: collapse;
 }
 
-.rowspan-3 {
+/* .rowspan-3 {
     vertical-align: top;
     text-align: center;
-}
+} */
 
 tbody tr td:first-of-type {
     text-align: center;
 }
 
 
-tbody tr:nth-child(even) td {
-    background-color: aquamarine;
+tbody tr:nth-child(odd)  {
+    background-color: rgb(125, 152, 209);
 }
 
 td, th {
     padding: 7px;
+}
+
+tr {
+    cursor: pointer;
+}
+
+tbody > tr:hover {
+    background-color: blue;
 }
