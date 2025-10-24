@@ -1,0 +1,26 @@
+table {
+    margin-top: 20px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+}
+
+.rowspan-3 {
+    vertical-align: top;
+    text-align: center;
+}
+
+tbody tr td:first-of-type {
+    text-align: center;
+}
+
+
+tbody tr:nth-child(even) td {
+    background-color: aquamarine;
+}
+
+td, th {
+    padding: 7px;
+}
