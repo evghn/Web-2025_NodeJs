@@ -21,6 +21,29 @@
       </ul>
     </nav>
     <div class="test-red test-green border">Test CSS</div>
+    <div class="d-rem">
+      <h2> Заголовок тест</h2>
+      <div>
+         <button>Регистрация</button>
+      </div>
+      <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa magni consequatur nam aperiam, libero, neque recusandae, cumque repellendus porro voluptates natus! Atque eligendi consectetur nesciunt dolor, quam aut ex.
+       </span>
+
+      <ul>
+        <li>xcvzxcvzxcvzxcv</li>
+        <li>zxcvzxcvzxcvzx</li>
+        <li>
+           <ul>
+            <li>zxzxfg ssgtgh rtghsrtb</li>
+            <li>t erth wrtgbs rvsdf</li>
+            <li>wertwrh wrgr </li>
+           </ul> 
+        </li>
+      </ul>
+    </div>
+
+
 
     <div class="main main-sticky">
       <div class="red">1</div>
@@ -38,9 +61,9 @@
       <div class="green static">2</div>
       <div class="blue">3</div>
     </div>
-
+    <div>Relative</div>
     <div class="main">
-      <div class="red">1</div>
+      <div class="red relative relative-red">1</div>
       <div class="green relative">2</div>
       <div class="blue">3</div>
     </div>
@@ -66,59 +89,58 @@
     </div>
 
     <form action="">
-        <div>
-          <label>
-             Login: 
-            <div>
-                <input 
-                  type="text" 
-                  placeholder="Login" 
-                  required
-                  minlength="3"
-                  maxlength="15"
-                 
-                ></div>
-          </label>
-          
-        </div>
-        <div>
-          <label>
-            Phone number +7(xxx)-xxx-xx-xx
-            <div>
-              <input 
-                type="text"
-                pattern="/^\+7\([\d]{3}\)\-[\d]{3}(\-[\d]{2}){2}$/"
-                title="Ввод телефона в формате: +7(xxx)-xxx-xx-xx"
-              >
-            </div>
-          </label>
-        </div>
-        <div>
-          <label>
-            Email
-            <div><input type="email" pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"></div>
-          </label>
-        </div>
-        <div>
-          <label>
-            number
-            <div>
-              <input 
-                type="number"
-                 min="10" 
-                 max="100"
-                 step="2"
-              ></div>
-          </label>
-        </div>
-        <div>
-          <label>
-            <div><input type="text"></div>
-          </label>
-        </div>
-        <input type="text" name="login" placeholder="Login" >
+      <div class="d-login">
+        <label for="login"> Login: </label>
+        <input
+          type="text"
+          placeholder="User_Login"
+          required
+          minlength="3"
+          maxlength="15"
+          id="login"
+        />
+        <div class="l-border"></div>
+      </div>
+
       <div>
-          <button type="submit" >Отправить</button>
+        <label>
+          Phone number +7(xxx)-xxx-xx-xx
+          <div>
+            <input
+              type="text"
+              pattern="/^\+7\([\d]{3}\)\-[\d]{3}(\-[\d]{2}){2}$/"
+              title="Ввод телефона в формате: +7(xxx)-xxx-xx-xx"
+            />
+          </div>
+        </label>
+      </div>
+      <div>
+        <label>
+          Email
+          <div>
+            <input
+              type="email"
+              pattern="^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$"
+            />
+          </div>
+        </label>
+      </div>
+      <div>
+        <label>
+          number
+          <div>
+            <input type="number" min="10" max="100" step="2" />
+          </div>
+        </label>
+      </div>
+      <div>
+        <label>
+          <div><input type="text" /></div>
+        </label>
+      </div>
+      <input type="text" name="login" placeholder="Login" />
+      <div>
+        <button type="submit">Отправить</button>
       </div>
     </form>
 

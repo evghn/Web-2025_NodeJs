@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
 .test-green {
     background-color: rgb(15, 119, 46);
 }
@@ -58,6 +65,7 @@ span::before {
     position: relative;
     top: -60px;
     left: 300px;
+    z-index: -1;
 }
 
 .absolute {
@@ -87,5 +95,71 @@ span::before {
 .sticky {
     top: 20px;
     position: sticky;
+
+}
+
+
+.relative-red {
+    z-index: -3;
+    left: 450px;
+    top: -100px;
+}
+
+.d-login {
+    position: relative;
+}
+
+
+.d-login label {
+    position: absolute;
+    left: 10px;
+
+}
+
+
+.d-login input {
+    padding: 25px 7px 7px;
+    border: none;
+    width: 100%;
+}
+.d-login input:focus {
+    border: none;
+}
+
+.l-border {
+    position: absolute;
+
+    height: 1px;
+    border: 1px solid navy;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    top: 45px;
+}
+
+
+.d-rem {
+    width: 100%;
+    height: 100vh;
+    font-size: 20px;
+}
+
+.d-rem h2 {
+    font-size: 3rem;
+}
+.d-rem span {
+    font-size: 1.5rem;
+}
+
+
+.d-rem li {
+    font-size: 1.5rem;
+}
+
+
+.d-rem button {
+    font-size: 1.5rem;
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
 
 }
