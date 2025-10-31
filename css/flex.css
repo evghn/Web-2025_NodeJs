@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #1c1b21;
   color: #fafafa;
@@ -7,6 +11,13 @@ body {
 .container {
   margin-top: 50px;
   border: 10px solid #6c38cc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* align-items: stretch; */
+  /* flex-flow: row wrap; */
+  /* height: 100vh; */
 }
 
 .item {
@@ -14,4 +25,24 @@ body {
   border: 1px solid #6c38cc;
   text-align: center;
   padding: 10px;
+  /* width: calc(100% / 11); */
+  width: 300px;
+}
+
+.item4 {
+  /* font-size: 50px; */
+  flex: 1;
+  min-width: 300px;
+}
+
+.item2 {
+  /* font-size: 50px; */
+  flex: 2;
+  min-width: 300px;
+}
+
+
+
+.item10 {
+  font-size: 120%;
 }

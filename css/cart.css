@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cart {
+    min-width: 310px;
+    max-width: 310px;
+    min-height: 531px;
+    max-height: 531px;
+    border: none;
+    border-radius: 32px;
+    /* background-color: blueviolet; */
+    overflow: hidden;
+    margin-left: 300px;
+}
+
+
+.info {
+    padding: 16px;
+    height: 69px;
+}
+
+.cart__title {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: 0%;
+margin-bottom: 16px;
+}
+
+.cart__order {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.cart__order-delivery {
+    
+}

@@ -1,5 +1,13 @@
+/* @font-face {
+    font-family: "Roboto", sans-serif;
+    src: url("/css/fonts/Roboto-VariableFont_wdth\,wght.ttf"),
+    url("/css/fonts/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+
+} */
+
 * {
     box-sizing: border-box;
+    font-family: "Roboto";
 }
 
 html {
