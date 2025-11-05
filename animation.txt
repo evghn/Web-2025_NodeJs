@@ -1,0 +1,7 @@
+1) transition: all + duration  + delay
+
+2) transition-timing-function
+
+3) transform
+
+4) animation
