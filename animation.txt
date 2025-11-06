@@ -5,3 +5,40 @@
 3) transform
 
 4) animation
+
+
+h1 {
+        font-weight: 700;
+        font-size: 10em;
+        margin: 10% 0 30px;
+        font-family: "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+        transform: rotateX(17deg) rotateY(9deg);
+        transform-style: preserve-3d;
+        animation: fa-author-colors 50s infinite;
+      }
+
+@keyframes fa-author-colors {
+        0% { transform: rotateX(17deg) rotateY(9deg); }
+        10% { transform: rotateX(27deg) rotateY(0deg); }
+        30% { transform: rotateX(37deg) rotateY(19deg); }
+        50% { transform: rotateX(-57deg) rotateY(9deg); }
+        70% { transform: rotateX(20deg) rotateY(-10deg); }
+        90% { transform: rotateX(17deg) rotateY(9deg); }
+        100% { transform: rotateX(-32deg) rotateY(19deg); }
+      }
+
+
+      .img-de {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    cursor:pointer;
+    transition: 1s;
+    filter: grayscale(100%);
+}
+
+.img-de:hover {
+    transform: scale(1.5);
+    filter: grayscale(0%);
+    
+}
