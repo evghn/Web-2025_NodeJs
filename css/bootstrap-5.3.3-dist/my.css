@@ -1,3 +1,63 @@
 .bg-my-color {
     background-color: rgb(43, 8, 77);
 }
+
+.container {
+    background-color: #fff;
+    min-height: calc(100vh - 56px );
+}
+
+body {
+    background-image: url("/img/background.jpg");
+}
+
+
+.cart__order {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.cart__order-delivery {
+    
+}
+
+.delivery, .delivery__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery {
+    width: 100%;
+    height: 39px;
+}
+
+.delivery__info {
+    width: 128px;
+    align-items: center;
+}
+
+.delivery__info img {
+    width: 16px;
+    height: 16px;
+}
+.delivery__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #2E3514;
+}
+
+.cart__order-btn button {
+    width: 120px;
+    height: 39px;
+    padding: 8px 16px;
+
+    background-color: #F0A35B;
+    border: none;
+    font-weight: 400;
+    line-height: 130%;
+    font-size: 18px;
+    color: #FFF;
+    border-radius: 32px;
+}
