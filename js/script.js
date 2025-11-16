@@ -325,24 +325,186 @@ const hello = function (userName = "user", role) {
   }
   return _hello ? `Hello ${userName}` : "";
 };
-
 //  let z = hello('admin,', 'admin')
 //  console.log(typeof hello);
 
 //     hello()
 
-const calc = (x = 1, m) => {
-  if (typeof x === "number") {
-    if (typeof m === "number" || m === undefined) {
-      if (m === 0 || m) {
-        return x ** m;
-      } else {
-        return x ** 2;
-      }
-    }
-  }
+// const calc = (x = 1, m) => {
+//   if (typeof x === "number") {
+//     if (typeof m === "number" || m === undefined) {
+//       if (m === 0 || m) {
+//         return x ** m;
+//       } else {
+//         return x ** 2;
+//       }
+//     }
+//   }
 
-  return false;
+//   return false;
+// };
+
+// console.log(calc(2, 6));
+
+// function f2(x, y) {
+//   function f1(x) {
+//     console.log(x);
+//   }
+
+//   const res = x * y;
+//   f1(res);
+
+//   return res;
+// }
+
+
+// function inc(x, y) {
+//     return x + y;
+// }
+
+// function dec(x, y) {
+//     return x - y;
+// }
+
+// function pow(x, y) {
+//     return x ** y;
+// }
+
+// function calc(x, y, func)  {
+//     return func(x, y)
+// } 
+
+// console.log(calc(2, 5, inc));
+// console.log(calc(2, 5, dec));
+// console.log(calc(2, 5, pow));
+// console.log(calc(2, 5, function(x, y) {
+//     return x + y;
+// }));
+
+// console.log(calc(2, 5, (x, y) => x + y));
+
+// function varToType(x, func) {
+//     return func(x)
+// }
+
+// console.log(varToType('1', Number));
+// console.log(varToType(100, String));
+
+// function calc(num) {
+//     return function (pow) {
+//         return num ** pow; 
+//     }
+// }
+
+// const calcRow = num => pow => num ** pow; 
+ 
+// const pow = calc(2);
+// console.log(calcRow(5)(2));
+
+// let i = c = 0
+
+// for (;;) { // i < 10  && c < 10
+//     if ( i > 10 || c > 9) {
+//         break;
+//     }
+
+//     c += 2;
+//     console.log(i, c);
+//     i--;
+// }
+
+// for(let i = 10; i > 0; i++) {
+//     console.log(i);
+    
+// }
+
+// for(;;){}
+
+// let i = 0;
+// while (i < 10) {
+//     if (!(i % 2)) {
+//         i++
+//         continue
+//     }
+    
+//     console.log(i);
+    
+//     i++;
+// }
+// let i = 10
+// do {
+// console.log(i)
+// } while (i < 10)
+
+// while (true) {
+//     console.log('ok')
+//     break;
+// }
+
+// Array
+const t = 10;
+const arr = [1,2,  t < 10 ? 'a' : 'c' , 3, 45, 10];
+arr.push(20)
+// console.log(arr.at(-2));
+
+// console.log(arr.length);
+// console.log(arr);
+// arr.length = 5
+// console.log(arr);
+// arr.length = 0
+// // console.log(arr);
+// arr.length = 5
+// console.log(arr.at(-1));
+arr.push(4)
+arr[0] = 10
+arr.length += 5
+arr.push(4)
+arr.push(true);
+arr.push(null);
+arr.push([1, null, [null, false, "ok"]]);
+arr[1] = function (x) {
+    return x ** 2
 };
 
-console.log(calc(2, 6));
+
+arr.push('ok2');
+
+// console.log(arr[1](3));
+// console.log(arr.at(-1));
+
+
+// console.log(arr.pop(), arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//         console.log(`${i} => `, arr[i]);
+//         continue;
+//     }
+//     console.log(`${i} => ${arr[i]}`);    
+// }
+
+// for (let value of arr) {
+//     console.log(value);    
+// }
+
+// for (let index in arr) {
+//     console.log(index,' => ', arr[index]);    
+// }
+
+// arr.forEach((value, index) => {
+//     console.log(index, ' => ', value);    
+// })
+
+// [1, 2, 3, 4, 5].forEach((value, index) => {
+//     console.log(index, ' => ', value);    
+// })
+
+// console.log("aaa".toUpperCase());
+
+console.log(
+    [1, 2, 3, 4, 5]
+        .map(val => val ** 2)
+        .filter(val => val % 2)
+        .join(', ')
+        // forEach(val => console.log(val))
+);
