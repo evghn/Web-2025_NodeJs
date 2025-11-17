@@ -357,7 +357,6 @@ const hello = function (userName = "user", role) {
 //   return res;
 // }
 
-
 // function inc(x, y) {
 //     return x + y;
 // }
@@ -372,7 +371,7 @@ const hello = function (userName = "user", role) {
 
 // function calc(x, y, func)  {
 //     return func(x, y)
-// } 
+// }
 
 // console.log(calc(2, 5, inc));
 // console.log(calc(2, 5, dec));
@@ -392,12 +391,12 @@ const hello = function (userName = "user", role) {
 
 // function calc(num) {
 //     return function (pow) {
-//         return num ** pow; 
+//         return num ** pow;
 //     }
 // }
 
-// const calcRow = num => pow => num ** pow; 
- 
+// const calcRow = num => pow => num ** pow;
+
 // const pow = calc(2);
 // console.log(calcRow(5)(2));
 
@@ -415,7 +414,7 @@ const hello = function (userName = "user", role) {
 
 // for(let i = 10; i > 0; i++) {
 //     console.log(i);
-    
+
 // }
 
 // for(;;){}
@@ -426,9 +425,9 @@ const hello = function (userName = "user", role) {
 //         i++
 //         continue
 //     }
-    
+
 //     console.log(i);
-    
+
 //     i++;
 // }
 // let i = 10
@@ -443,8 +442,8 @@ const hello = function (userName = "user", role) {
 
 // Array
 const t = 10;
-const arr = [1,2,  t < 10 ? 'a' : 'c' , 3, 45, 10];
-arr.push(20)
+const arr = [1, 2, t < 10 ? "a" : "c", 3, 45, 10];
+arr.push(20);
 // console.log(arr.at(-2));
 
 // console.log(arr.length);
@@ -455,23 +454,21 @@ arr.push(20)
 // // console.log(arr);
 // arr.length = 5
 // console.log(arr.at(-1));
-arr.push(4)
-arr[0] = 10
-arr.length += 5
-arr.push(4)
+arr.push(4);
+arr[0] = 10;
+arr.length += 5;
+arr.push(4);
 arr.push(true);
 arr.push(null);
 arr.push([1, null, [null, false, "ok"]]);
 arr[1] = function (x) {
-    return x ** 2
+  return x ** 2;
 };
 
-
-arr.push('ok2');
+arr.push("ok2");
 
 // console.log(arr[1](3));
 // console.log(arr.at(-1));
-
 
 // console.log(arr.pop(), arr);
 
@@ -480,31 +477,234 @@ arr.push('ok2');
 //         console.log(`${i} => `, arr[i]);
 //         continue;
 //     }
-//     console.log(`${i} => ${arr[i]}`);    
+//     console.log(`${i} => ${arr[i]}`);
 // }
 
 // for (let value of arr) {
-//     console.log(value);    
+//     console.log(value);
 // }
 
 // for (let index in arr) {
-//     console.log(index,' => ', arr[index]);    
+//     console.log(index,' => ', arr[index]);
 // }
 
 // arr.forEach((value, index) => {
-//     console.log(index, ' => ', value);    
+//     console.log(index, ' => ', value);
 // })
 
 // [1, 2, 3, 4, 5].forEach((value, index) => {
-//     console.log(index, ' => ', value);    
+//     console.log(index, ' => ', value);
 // })
 
 // console.log("aaa".toUpperCase());
 
-console.log(
-    [1, 2, 3, 4, 5]
-        .map(val => val ** 2)
-        .filter(val => val % 2)
-        .join(', ')
-        // forEach(val => console.log(val))
-);
+// console.log(
+//     [1, 2, 3, 4, 5]
+//         .map(val => val ** 2)
+//         .filter(val => val % 2)
+//         .join(', ')
+//         // forEach(val => console.log(val))
+// );
+
+// Пользователь:
+//
+// Возраст
+// Наличие работы
+// Деньги
+//
+// Нужно проверить может ли он купить новый ноутбук за 2000$?
+// Он может брать не только свои деньги, но и взять кредит. Ему дадут 500$, только если ему больше 24-х лет и он имеет работу, 100$ если ему просто больше 24-х лет и 0 в ином случае. Напишите функцию, которая принимает данные пользователя и товара и возвращает true или false.
+
+function canBy(age, money, price, job = false) {
+  function getCredit(age, job) {
+    switch (true) {
+      case age >= 24 && job:
+        return 500;
+      case age >= 24:
+        return 100;
+    }
+
+    return 0;
+  }
+
+  return price <= money + getCredit(age, job);
+}
+
+prices = [
+  [100, 200],
+  [150, 130],
+  [180, 220],
+  [240, 140],
+  [80, 120],
+];
+
+const priceFilter = (delta = false, outString = false) => {
+  const res = prices
+    .map((val) => {
+      val[2] = delta ? val[1] < val[0] : val[1] > val[0];
+      return val;
+    })
+    .filter((val) => val[2]);
+
+  return outString
+    ? res.map((val) => `[${val[0]}, ${val[1]}]`).join(", ")
+    : res;
+};
+
+// console.log(priceFilter(true, true));
+
+// map
+
+function myMap(array, func) {
+  const res = [];
+  if (Array.isArray(array) && array.length) {
+    for (let val of array) {
+      res.push(func(val)); // x => x ** 2
+    }
+  }
+
+  return res;
+}
+
+const priceFilter2 = (delta = false, outString = false) => {
+  let res = myMap(prices, (val) => {
+    val[2] = delta ? val[0] > val[1] : val[1] > val[0];
+    return val;
+  });
+  console.log(res);
+
+  res = res.filter((val) => val[2]);
+
+  return outString
+    ? myMap(res, (val) => `[${val[0]}, ${val[1]}]`).join(", ")
+    : res;
+};
+
+// console.log(priceFilter2(true, true));
+
+// const ar2 = [1, 2, 3, 4, 5]
+
+// console.log(myMap(ar2, x => x ** 2))
+
+// global
+
+function userLogin() {
+  let user;
+
+  
+  const f = function (userName = prompt("", "")) {
+    user = userName || "guest";
+    return user;
+  };
+
+  return f;
+}
+
+// const funcUser = userLogin();
+
+// console.log(funcUser());
+// // user = "petya";
+// console.log(funcUser());
+// // user = "kolya";
+// console.log(funcUser("oleg"));
+// console.log(user);
+
+
+
+
+// counter 
+/*
+val
++ (1) -> x
+- (1) -> x
+get -> val
+set -> val = x
+reset -> val =0
+*/
+
+
+function getCounter() {
+  let count = 0;
+
+  return [
+    (x = Number(prompt("Введите число '+'"))) => {
+      x = x || 1;
+      count += x;
+    },
+    (x = Number(prompt("Введите число '-'"))) => {
+      x = x || 1;
+      count -= x;
+    },
+    () => {
+      alert(`count = ${count}`)
+      return count},
+    (x = Number(prompt("Введите число - set"))) => {
+      x = x || 0; 
+      count = x;
+    },
+    () => {
+      count = 0;
+    }
+  ]
+}
+
+
+const counter = getCounter();
+
+// console.log(counter);
+const text = `
+1 - inc
+2 - dec
+3 - get value
+4 - set value
+5 - reset value
+6 - exit
+`;
+
+while (true) {
+  let val =  Number(prompt(text))
+  val = val || 6  
+  
+  if (val === 6) {
+    console.log('The end!');
+    
+    break;
+  }
+
+  switch (val) {
+    case 1:
+      counter[0]();
+      console.log(`inc: - ok`);
+      break;
+    case 2:
+      counter[1]();
+      console.log(`dec: - ok`);
+      break;
+    case 3:
+      console.log(`count: ${counter[2]()}`);
+      break;
+    case 4:
+      counter[3]()
+      console.log(`set: ok`);
+      break;
+    case 5:
+      counter[4]()
+      console.log(`reset: ok`);
+      break;
+    
+  }
+}
+
+// console.log(counter[2]());
+ // 0 + 1
+// counter[0](5); // 1 + 5
+// console.log(counter[2]()); //6
+// counter[1](); // 6 - 1
+// console.log(counter[2]());
+// counter[3](10); // -> 10
+// console.log(counter[2]()); //10
+// counter[4](); // -> 0
+// console.log(counter[2]()); // 10
+
+
+
