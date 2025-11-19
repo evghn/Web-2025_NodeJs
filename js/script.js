@@ -1,3 +1,5 @@
+
+
 // Number
 
 // String - строки
@@ -661,7 +663,7 @@ const text = `
 6 - exit
 `;
 
-while (true) {
+while (false) {
   let val =  Number(prompt(text))
   val = val || 6  
   
@@ -705,6 +707,149 @@ while (true) {
 // console.log(counter[2]()); //10
 // counter[4](); // -> 0
 // console.log(counter[2]()); // 10
+
+
+
+const data = [10, 2, 3, 4, 15, 6, 7, 15, '5']
+// console.log(data);
+
+const acc = data
+  .filter(val => data
+  .filter(val => val % 2))
+  .reduce((acc, val) => acc + val)
+  
+  
+
+// reduce((acc, val) => {
+//   console.log(acc, val);
+//   if (val % 2) {
+// // нечетное
+//     acc += val;
+//   }
+//   return acc;
+// }, 0 )
+
+// console.log(data.filter(val => val % 2));
+const findFunc = (val) => (val % 2) && val < 8 && val > 2
+
+const res1 = data.findIndex(findFunc)
+const l = data.filter(findFunc)
+
+if (l.length) {
+  // code
+
+  // l 
+}
+
+// const can = ['update', 'create', 'view', 'delete']
+const canUser = ['update', 'create', 'view']
+
+// console.log(canUser.includes('delete'));
+
+const data2 = [2, 3, 4, 56, 7, 8, 9];
+
+// console.log(data.concat(data2));
+
+
+// const res2 = data.slice(4, -2).reverse()
+// console.log(data, res2);
+
+// const res2 = data.splice(4, 3)
+// console.log(data, res2);
+
+
+function calc (a, b, c, d) {
+  return a + b + c + d;
+}
+
+
+// console.log(calc(data[0], data[1], data[2], data[3]));
+// console.log(data.slice(0,4));
+// console.log(...data.slice(0,4));
+
+// console.log(calc(...data));
+
+// console.log([...data, ...data2])
+
+
+function calc2(a, b, c, d, ...data) {
+
+  // if (data.length) {
+  //   console.log(data);
+  // }
+console.log(a, b, c, d, data);
+
+}
+
+
+
+// console.log(calc2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+const [a1, b1, c1, d1, ...res5] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(a1, b1, c1, d1, res5);
+
+// const text2 = `
+// 1. text1 
+// 2. text2`;
+
+// console.log(text2);
+// console.log('1. text1\n2. text2');
+
+
+const s11 = 'Вася Пупкин';
+const s12 = '🥤User Name';
+
+// console.log(typeof s11, s11);
+
+// s11[0] = 'C';
+// data[0] = 'C';
+
+// console.log( data.at(-1), s11.charAt(1));
+// console.log(s11.length, s12.length);
+// console.log(s12[2], s12[0] + s12[1]);
+
+// console.log(s11.toLowerCase().replaceAll("п", 'б'));
+
+// console.log(s11);
+
+console.log(s11.padStart(12, '*'));
+
+const card = "2222 2222 2222 3333";
+// const card = "2222222222223333";
+// console.log(
+//   card,'\n',
+//   card
+//     .replaceAll(" ", "")
+//     .slice(-4)
+//     .padStart(16, "*")
+// );
+
+
+
+const phones = [
+'+7(111)111-11-11',
+'+7(222)-222-22-22',
+'8(111)111-11-11',
+'8(222)-222-22-22',
+'+71111111111',
+'81111111111',
+'8(222) 222 22 22',
+'+7(222)-222-22-22',
+
+// incorrect
+'+711111111',
+'91111111111',
+'8(222)222a222',
+];
+
+console.log(
+  s11
+    .split(' ')
+    .join(' ')
+
+);
+
+
 
 
 
