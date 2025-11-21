@@ -812,7 +812,7 @@ const s12 = '🥤User Name';
 
 // console.log(s11);
 
-console.log(s11.padStart(12, '*'));
+// console.log(s11.padStart(12, '*'));
 
 const card = "2222 2222 2222 3333";
 // const card = "2222222222223333";
@@ -836,20 +836,48 @@ const phones = [
 '8(222) 222 22 22',
 '+7(222)-222-22-22',
 
+
+
 // incorrect
+'+7(222)-222+72-22',
 '+711111111',
 '91111111111',
 '8(222)222a222',
 ];
 
-console.log(
-  s11
-    .split(' ')
-    .join(' ')
+// console.log(
+//   s11
+//     .split(' ')
+//     .join(' ')
 
-);
+// );
+
+// console.log(
+//  phones
+//   .map(el => 
+//     el
+//       .replaceAll(" ", "")
+//       .replaceAll("-", "")
+//       .replaceAll("(", "")
+//       .replaceAll(")", "")
+//       .replace("+7", "8")    
+//   )
+//   .filter(el => 
+//     el.startsWith("8") &&
+//     Number(el) &&
+//     el.length === 11
+//   )
+//   .map(el => `+7${el.slice(1)}`)
+// )
 
 
 
 
+const data32 = [1, 200,  30, 14, 5, 8, 149, 141, 30];
+const dataS = ["text", "2 text", "2 Text", "Text", "2"];
 
+const dataB = [true, true, false, null, undefined ]
+
+console.log(data32.sort((a, b) => b - a));
+console.log(dataS.sort());
+console.log(dataB.sort());
